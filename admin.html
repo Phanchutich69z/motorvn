@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Admin - Bố Già Moto Dealer</title>
+
+<link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+<!-- HEADER -->
+
+<header>
+
+<h1>TRANG QUẢN TRỊ ADMIN</h1>
+
+<nav>
+
+<a href="index.html">Trang Chủ</a>
+
+<a href="login.html">Đăng Xuất</a>
+
+</nav>
+
+</header>
+
+<!-- ABOUT -->
+
+<section class="about">
+
+<h2>Xin Chào Admin 👑</h2>
+
+<p>
+Đây là khu vực quản lý hệ thống của Bố Già Moto Dealer.
+Quản lý xe, khách hàng và đơn hàng tại đây.
+</p>
+
+</section>
+
+<!-- ADMIN PANEL -->
+
+<section class="bikes">
+
+<!-- ORDER -->
+
+<div class="bike-card">
+
+<h3>📦 Quản Lý Đơn Hàng</h3>
+
+<p>
+Kiểm tra khách hàng mua xe và thông tin đơn hàng.
+</p>
+
+<button onclick="showAdmin('orders')">
+Xem Đơn Hàng
+</button>
+
+</div>
+
+<!-- BIKES -->
+
+<div class="bike-card">
+
+<h3>🏍️ Quản Lý Xe</h3>
+
+<p>
+Cập nhật giá xe, hình ảnh và thông tin moto.
+</p>
+
+<button onclick="showAdmin('bikes')">
+Chỉnh Sửa Xe
+</button>
+
+</div>
+
+<!-- CUSTOMERS -->
+
+<div class="bike-card">
+
+<h3>👥 Khách Hàng</h3>
+
+<p>
+Theo dõi tài khoản khách hàng đăng ký.
+</p>
+
+<button onclick="showAdmin('customers')">
+Xem Khách Hàng
+</button>
+
+</div>
+
+<!-- SALES -->
+
+<div class="bike-card">
+
+<h3>💰 Doanh Thu</h3>
+
+<p>
+Theo dõi doanh thu và thống kê bán hàng.
+</p>
+
+<button onclick="showAdmin('sales')">
+Xem Thống Kê
+</button>
+
+</div>
+
+</section>
+
+<!-- DETAIL -->
+
+<div id="adminBox" class="detail-box">
+
+<h2>Thông Tin Quản Trị</h2>
+
+<p>Chọn chức năng để xem chi tiết.</p>
+
+</div>
+
+<!-- FOOTER -->
+
+<footer>
+
+<h2>
+"Không Dành Cho Số Đông — Chỉ Dành Cho Kẻ Dẫn Đầu."
+</h2>
+
+<p>Email: phanboicau2k5@gmail.com</p>
+
+<p>© 2026 Bố Già Moto Dealer</p>
+
+</footer>
+
+<script>
+
+function showAdmin(type){
+
+let box = document.getElementById("adminBox");
+
+if(type === "orders"){
+
+box.innerHTML = `
+
+<h2>📦 Quản Lý Đơn Hàng</h2>
+
+<p>• Nguyễn Văn A - Kawasaki H2R</p>
+
+<p>• Trần Văn B - BMW S1000RR</p>
+
+<p>• Lê Minh C - Ducati Panigale V4 S</p>
+
+`;
+
+}
+
+else if(type === "bikes"){
+
+box.innerHTML = `
+
+<h2>🏍️ Quản Lý Xe</h2>
+
+<p>• Kawasaki Ninja H2R</p>
+
+<p>• Dodge Tomahawk V10</p>
+
+<p>• Suzuki Hayabusa</p>
+
+<p>• BMW S1000RR</p>
+
+`;
+
+}
+
+else if(type === "customers"){
+
+box.innerHTML = `
+
+<h2>👥 Danh Sách Khách Hàng</h2>
+
+<p>• Nguyễn Văn A</p>
+
+<p>• Trần Văn B</p>
+
+<p>• Lê Minh C</p>
+
+`;
+
+}
+
+else if(type === "sales"){
+
+box.innerHTML = `
+
+<h2>💰 Thống Kê Doanh Thu</h2>
+
+<p>Doanh thu tháng này: 12.500.000.000 VNĐ</p>
+
+<p>Đơn hàng thành công: 15</p>
+
+<p>Xe bán chạy nhất: Kawasaki Ninja H2R</p>
+
+`;
+
+}
+
+}
+
+</script>
+
+</body>
+
+</html>

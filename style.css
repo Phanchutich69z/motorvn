@@ -1,0 +1,278 @@
+body{
+margin:0;
+font-family:Arial, sans-serif;
+background:#111;
+color:white;
+}
+
+/* HEADER */
+
+header{
+background:black;
+padding:20px;
+display:flex;
+justify-content:space-between;
+align-items:center;
+position:sticky;
+top:0;
+z-index:1000;
+}
+
+header h1{
+color:red;
+font-size:32px;
+margin:0;
+}
+
+nav a{
+color:white;
+margin:10px;
+text-decoration:none;
+font-weight:bold;
+transition:0.3s;
+}
+
+nav a:hover{
+color:red;
+}
+
+/* HERO */
+
+.hero{
+position:relative;
+height:600px;
+overflow:hidden;
+}
+
+.hero video{
+width:100%;
+height:100%;
+object-fit:cover;
+}
+
+.hero-text{
+position:absolute;
+top:40%;
+left:10%;
+background:rgba(0,0,0,0.6);
+padding:25px;
+border-radius:10px;
+max-width:500px;
+}
+
+.hero-text h2{
+font-size:40px;
+margin-bottom:15px;
+}
+
+.hero-text p{
+font-size:18px;
+line-height:1.6;
+}
+
+/* ABOUT */
+
+.about{
+padding:60px 30px;
+text-align:center;
+}
+
+.about h2{
+font-size:36px;
+margin-bottom:20px;
+color:red;
+}
+
+/* BIKES */
+
+.bikes{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:20px;
+padding:30px;
+}
+
+.bike-card{
+background:#222;
+padding:20px;
+border-radius:10px;
+text-align:center;
+transition:0.3s;
+box-shadow:0 0 10px rgba(0,0,0,0.5);
+}
+
+.bike-card:hover{
+transform:scale(1.03);
+}
+
+.bike-card img{
+width:100%;
+height:200px;
+object-fit:cover;
+border-radius:10px;
+margin-bottom:15px;
+}
+
+.bike-card h3{
+margin:10px 0;
+font-size:24px;
+}
+
+.bike-card p{
+font-size:18px;
+color:#ccc;
+}
+
+/* BUTTON */
+
+button{
+background:red;
+color:white;
+border:none;
+padding:10px 20px;
+margin:5px;
+cursor:pointer;
+border-radius:5px;
+font-weight:bold;
+transition:0.3s;
+}
+
+button:hover{
+background:darkred;
+}
+
+/* BUY BUTTON */
+
+.buy-btn,
+.gmail-btn{
+display:inline-block;
+background:red;
+color:white;
+padding:10px 20px;
+border-radius:5px;
+text-decoration:none;
+font-weight:bold;
+margin-top:10px;
+transition:0.3s;
+}
+
+.buy-btn:hover,
+.gmail-btn:hover{
+background:darkred;
+}
+
+/* DETAIL BOX */
+
+.detail-box{
+padding:30px;
+background:#1a1a1a;
+margin:20px;
+border-radius:10px;
+line-height:1.7;
+}
+
+/* CHATBOX */
+
+.chatbox{
+padding:40px;
+text-align:center;
+}
+
+.chatbox h2{
+margin-bottom:30px;
+font-size:32px;
+color:red;
+}
+
+.chat-area{
+background:#1a1a1a;
+height:300px;
+overflow-y:auto;
+padding:20px;
+border-radius:10px;
+margin-bottom:20px;
+text-align:left;
+}
+
+.admin-chat{
+background:#333;
+padding:10px;
+border-radius:10px;
+margin:10px 0;
+width:80%;
+}
+
+.user-chat{
+background:red;
+padding:10px;
+border-radius:10px;
+margin:10px 0;
+width:80%;
+margin-left:auto;
+}
+
+.chatbox input{
+width:70%;
+padding:12px;
+border:none;
+border-radius:5px;
+margin-bottom:10px;
+font-size:16px;
+}
+
+/* LOGIN FORM */
+
+.form-box{
+width:300px;
+margin:100px auto;
+background:#222;
+padding:30px;
+border-radius:10px;
+text-align:center;
+}
+
+.form-box input{
+width:90%;
+padding:10px;
+margin:10px 0;
+border:none;
+border-radius:5px;
+}
+
+/* FOOTER */
+
+footer{
+background:black;
+text-align:center;
+padding:40px;
+margin-top:50px;
+}
+
+footer h2{
+color:red;
+margin-bottom:20px;
+}
+
+/* RESPONSIVE */
+
+@media(max-width:768px){
+
+header{
+flex-direction:column;
+}
+
+.hero-text{
+left:5%;
+right:5%;
+top:35%;
+}
+
+.hero-text h2{
+font-size:28px;
+}
+
+.chatbox input{
+width:90%;
+}
+
+}

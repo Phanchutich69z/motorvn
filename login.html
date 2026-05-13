@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Đăng Nhập - Bố Già Moto Dealer</title>
+
+<link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+<div class="form-box">
+
+<h2>Đăng Nhập</h2>
+
+<input type="text" id="username" placeholder="Tên đăng nhập">
+
+<input type="password" id="password" placeholder="Mật khẩu">
+
+<button onclick="login()">
+Đăng Nhập
+</button>
+
+<p id="loginMessage"></p>
+
+<a href="index.html" class="buy-btn">
+Quay Về Trang Chủ
+</a>
+
+</div>
+
+<script>
+
+function login(){
+
+let user = document.getElementById("username").value.trim();
+
+let pass = document.getElementById("password").value.trim();
+
+let message = document.getElementById("loginMessage");
+
+if(user === "" || pass === ""){
+
+message.innerHTML = "Vui lòng nhập đầy đủ thông tin!";
+message.style.color = "yellow";
+
+return;
+
+}
+
+if(user === "admin" && pass === "123456"){
+
+message.innerHTML = "Đăng nhập Admin thành công!";
+message.style.color = "lightgreen";
+
+setTimeout(() => {
+
+window.location.href = "admin.html";
+
+},1000);
+
+}
+
+else{
+
+message.innerHTML = "Đăng nhập khách hàng thành công!";
+message.style.color = "lightblue";
+
+setTimeout(() => {
+
+window.location.href = "customer.html";
+
+},1000);
+
+}
+
+}
+
+</script>
+
+</body>
+
+</html>
